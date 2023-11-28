@@ -1,0 +1,6 @@
+fastapi
+pydantic
+pandas
+joblib
+scikit-learn
+xgboost==2.0.2
