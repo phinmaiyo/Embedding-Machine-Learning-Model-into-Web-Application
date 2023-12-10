@@ -8,7 +8,7 @@ Develop a Machine Learning API (Application Programming Interface) using FastAPI
 ## Introduction
 
 
-In this project, we aim to discover how to create an API that might be requested to interact with a ML model. This is an interesting solution when you want to keep your model architecture secret or to make your model available to users already having an API. By creating an API, and deploying it, your model can so that receive request using the internet protocol as presented by the illustration below.
+In this project, we aim to discover how to create an API that might be requested to interact with a ML model. This is an interesting solution when you want to keep your model architecture secret or to make your model available to users already having an API. By creating an API, and deploying it, your model can receive request using the internet protocol as presented by the illustration below.
 
 ![API illustration](https://lh3.googleusercontent.com/-qVJ4ZsbjsmH6CnYbojsAR4ImyHV8yxsFVinunH-pX7VCapGvufcXiPak6YVKIrj9ZdiCHwK5UFtQW8yuU5t83pz6fbqN1F2p74OWuT5dObCPnTBuCYr_P1mUg8arbP0WuEt7j_A)
 
@@ -62,9 +62,9 @@ The both long command-lines have a same structure, they pipe multiple commands u
 
           uvicorn src.demo_01.api:app --reload 
 
-    <!-- - Salary prediction
+    <!-- - sepsis prediction
 
-          uvicorn src.salary.api:app --reload  -->
+          uvicorn main:app --reload  -->
 
 
   - Go to your browser at the following address, to explore the api's documentation :
@@ -80,8 +80,7 @@ The both long command-lines have a same structure, they pipe multiple commands u
         <th>FastAPI</th>
     </tr>
     <tr>
-        <td><img src="./screenshots/.png"/></td>
-        <td><img src="./screenshots/.png"/></td>
+        <td><img src="./Screenshots(413)/.png"/></td>
     </tr>
 </table> -->
 
@@ -108,4 +107,4 @@ Oh, one more thing, please do not forget to put a description when you make your
 ## Author
 
 - [Phonex Chemutai](https://www.linkedin.com/in/phonex-chemutai/)
-[![My Article Link]()]()
+[![My Article Link](https://medium.com/@phinmaiyo/machine-learning-model-deployment-with-fastapi-and-docker-5e5fef8a2dd9)]()
