@@ -119,4 +119,4 @@ Oh, one more thing, please do not forget to put a description when you make your
 ## Author
 
 - [Phonex Chemutai](https://www.linkedin.com/in/phonex-chemutai/)
-[![My Article Link](https://medium.com/@phinmaiyo/machine-learning-model-deployment-with-fastapi-and-docker-5e5fef8a2dd9)]()
+[My Article Link](https://medium.com/@phinmaiyo/machine-learning-model-deployment-with-fastapi-and-docker-5e5fef8a2dd9)
