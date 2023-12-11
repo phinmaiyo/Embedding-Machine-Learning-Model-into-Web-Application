@@ -1,5 +1,4 @@
-# Machine Learning API using FastAPI
-Develop a Machine Learning API (Application Programming Interface) using FastAPI.
+# Model Deployment with FastAPI and Docker
 
 [![python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 [![MIT licensed](https://img.shields.io/badge/license-mit-blue?style=for-the-badge&logo=appveyor)](./LICENSE)
@@ -8,25 +7,16 @@ Develop a Machine Learning API (Application Programming Interface) using FastAPI
 ## Introduction
 
 
-In this project, we aim to discover how to create an API that might be requested to interact with a ML model. This is an interesting solution when you want to keep your model architecture secret or to make your model available to users already having an API. By creating an API, and deploying it, your model can receive request using the internet protocol as presented by the illustration below.
-
-![API illustration](https://lh3.googleusercontent.com/-qVJ4ZsbjsmH6CnYbojsAR4ImyHV8yxsFVinunH-pX7VCapGvufcXiPak6YVKIrj9ZdiCHwK5UFtQW8yuU5t83pz6fbqN1F2p74OWuT5dObCPnTBuCYr_P1mUg8arbP0WuEt7j_A)
-
-**Source** : *The benefits of Machine Learning APIs - UbiOps*
+This repository demonstrates the deployment of a machine learning model using FastAPI within a Docker container. The project provides a RESTful API endpoint to interact with the model predictions.
 
 
-## Description
+## Prerequisites
 
-<!-- 
-[FastAPI](https://fastapi.tiangolo.com/) # 
--->
+Ensure you have the following installed:
 
-You will have a minimal API demo with [FastAPI](https://fastapi.tiangolo.com/), this will just serve you to make sure that everything works correctly. Then, you will have to make your own API, this allowing you to interact with a Machine Learning model, that is to say:
-- Pass data through a request;
-- Get the data in using the API;
-- Apply the necessary processing;
-- Submit the processed data to the ML model to make the predictions;
-- Process the predictions obtained and return them as the API's response ot the input request.
+- [Docker](https://www.docker.com/)
+- Python 3.x
+
 
 
 ## Setup
@@ -52,15 +42,14 @@ The both long command-lines have a same structure, they pipe multiple commands u
 
 **NB:** For MacOs users, please install `Xcode` if you have an issue.
 
-## Run FastAPI
+## Usage
+
+1. Start the FastAPI server:
 
 - Run the demo apps (being at the repository root):
         
   FastAPI:
     
-    - Demo
-
-          uvicorn src.demo_01.api:app --reload 
 
     <!-- - sepsis prediction
 
@@ -84,6 +73,28 @@ The both long command-lines have a same structure, they pipe multiple commands u
     </tr>
 </table> -->
 
+2. Docker Deployment
+
+- Build the Docker image:
+docker build -t your_image_name .
+
+- Run the Docker container:
+docker run -d -p 80:80 your_image_name
+
+This will run the container in detached mode, exposing it on port 80.
+
+- Access the API:
+Open your web browser or use tools like curl or Postman to access the API at http://localhost.
+
+## API Endpoints
+/predict: Endpoint to make predictions using the model. Send POST requests with necessary data for predictions.
+
+## Project Structure
+- main.py: Contains the FastAPI application files.
+- src/: Includes model-related files (e.g., pickled model, preprocessing scripts).
+- requirements.txt: Lists Python dependencies.
+- Dockerfile: Contains instructions to build the Docker image.
+
 
 ## Resources
 Here are some ressources you would read to have a good understanding of FastAPI :
@@ -95,12 +106,13 @@ Here are some ressources you would read to have a good understanding of FastAPI 
 - [Http status codes](https://www.linkedin.com/feed/update/urn:li:activity:7017027658400063488?utm_source=share&utm_medium=member_desktop)
 
 
-
-
-
 ## Contributing
 
 Feel free to make a PR or report an issue 😃.
+
+## License
+
+This project is licensed under the MIT License.
 
 Oh, one more thing, please do not forget to put a description when you make your PR 🙂.
 
