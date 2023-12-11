@@ -61,17 +61,10 @@ The both long command-lines have a same structure, they pipe multiple commands u
       http://127.0.0.1:8000/docs
 
 
-  Screenshots
+- Screenshots
 
-<table>
-    <tr>
-        <th>FastAPI</th>
-        <th>FastAPI</th>
-    </tr>
-    <tr>
-        <td><img src="./Screenshots(413)/.png"/></td>
-    </tr>
-</table> -->
+![FastAPI Logo](./screenshots/fastapi.png)
+
 
 2. Docker Deployment
 
